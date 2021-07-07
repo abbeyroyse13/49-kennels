@@ -7,10 +7,16 @@
         "locationId": 2
     }],
     "customers": [{
-        "id": 1,
-        "name": "Hannah Hall",
-        "address": "7002 Chestnut Ct"
-    }],
+            "id": 1,
+            "name": "Hannah Hall",
+            "address": "7002 Chestnut Ct"
+        },
+        {
+            "id": 2,
+            "name": "Bill Hader",
+            "address": "1987 Derry Street"
+        }
+    ],
     "employees": [],
     "locations": [{
             "id": 1,
