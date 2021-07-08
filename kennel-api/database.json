@@ -1,11 +1,19 @@
 {
     "animals": [{
-        "id": 1,
-        "name": "Doodles",
-        "breed": "Poodle",
-        "customerId": 1,
-        "locationId": 2
-    }],
+            "id": 1,
+            "name": "Doodles",
+            "breed": "Poodle",
+            "customerId": 1,
+            "locationId": 2
+        },
+        {
+            "id": 2,
+            "name": "Bon",
+            "breed": "Bunny",
+            "customerId": 2,
+            "locationId": 1
+        }
+    ],
     "customers": [{
             "id": 1,
             "name": "Hannah Hall",
@@ -15,9 +23,24 @@
             "id": 2,
             "name": "Bill Hader",
             "address": "1987 Derry Street"
+        },
+        {
+            "id": 3,
+            "name": "Jackson Rippner",
+            "address": "666 HellFire Lane"
         }
     ],
-    "employees": [],
+    "employees": [{
+            "id": 1,
+            "name": "Tommy Shelby",
+            "locationId": 2
+        },
+        {
+            "id": 2,
+            "name": "Shane Madej",
+            "locationId": 1
+        }
+    ],
     "locations": [{
             "id": 1,
             "name": "Nashville North",
