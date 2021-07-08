@@ -1,6 +1,7 @@
 import React from "react";
 import { PropsAndState } from './PropsAndState'
 
+// This is what the Home displays  
 export const Home = () => (
     <>
         <h2>Nashville Kennels</h2>
