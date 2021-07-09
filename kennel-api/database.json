@@ -12,6 +12,20 @@
             "breed": "Bunny",
             "customerId": 2,
             "locationId": 1
+        },
+        {
+            "id": 3,
+            "name": "Craw",
+            "breed": "Crow",
+            "customerId": 4,
+            "locationId": 3
+        },
+        {
+            "id": 4,
+            "name": "Bane",
+            "breed": "Rotweiler",
+            "customerId": 3,
+            "locationId": 2
         }
     ],
     "customers": [{
@@ -28,17 +42,32 @@
             "id": 3,
             "name": "Jackson Rippner",
             "address": "666 HellFire Lane"
+        },
+        {
+            "id": 4,
+            "name": "Jonathan Crane",
+            "address": "300 Fear Street"
         }
     ],
     "employees": [{
             "id": 1,
             "name": "Tommy Shelby",
-            "locationId": 2
+            "locationId": 1
         },
         {
             "id": 2,
             "name": "Shane Madej",
             "locationId": 1
+        },
+        {
+            "id": 3,
+            "name": "Jerome Valeska",
+            "locationId": 2
+        },
+        {
+            "id": 4,
+            "name": "Ecco",
+            "locationId": 2
         }
     ],
     "locations": [{
