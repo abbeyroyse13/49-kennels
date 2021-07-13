@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { Home } from "./Home"
 import { AnimalProvider } from "./animal/AnimalProvider"
 import { AnimalList } from "./animal/AnimalList"
+import { AnimalForm } from "./animal/AnimalForm"
 import { CustomerProvider } from "./customer/CustomerProvider"
 import { CustomerList } from "./customer/CustomerList"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
@@ -26,34 +27,38 @@ export const ApplicationViews = () => {
                 <Route exact path="/animals">
                     <AnimalList />
                 </Route> */}
-                <AnimalProvider>
-                    <LocationProvider>
-                        <CustomerProvider>
-                            <Route exact path="/animals">
-                                <AnimalList />
-                            </Route>
-                        </CustomerProvider>
-                    </LocationProvider>
-                </AnimalProvider>
-
-                <CustomerProvider>
-                    <Route exact path="/customers">
-                        <CustomerList />
-                    </Route>
-                </CustomerProvider>
-
-                <EmployeeProvider>
-                    <Route exact path="/employees">
-                        <EmployeeList />
-                    </Route>
-                </EmployeeProvider>
-
+            <AnimalProvider>
                 <LocationProvider>
-                    <Route exact path="/locations">
-                        <LocationList />
-                    </Route>
+                    <CustomerProvider>
+                        <Route exact path="/animals">
+                            <AnimalList />
+                        </Route>
+
+                        <Route exact path="/animals/create">
+                            <AnimalForm />
+                        </Route>
+                    </CustomerProvider>
                 </LocationProvider>
+            </AnimalProvider>
+
+            <CustomerProvider>
+                <Route exact path="/customers">
+                    <CustomerList />
+                </Route>
+            </CustomerProvider>
+
+            <EmployeeProvider>
+                <Route exact path="/employees">
+                    <EmployeeList />
+                </Route>
+            </EmployeeProvider>
+
+            <LocationProvider>
+                <Route exact path="/locations">
+                    <LocationList />
+                </Route>
+            </LocationProvider>
 
         </>
-            )
+    )
 }
