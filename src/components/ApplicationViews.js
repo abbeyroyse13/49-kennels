@@ -22,38 +22,38 @@ export const ApplicationViews = () => {
             </Route>
 
             {/* Render the animal list when http://localhost:3000/animals */}
-            <AnimalProvider>
+            {/* <AnimalProvider>
                 <Route exact path="/animals">
                     <AnimalList />
-                </Route>
+                </Route> */}
+                <AnimalProvider>
+                    <LocationProvider>
+                        <CustomerProvider>
+                            <Route exact path="/animals">
+                                <AnimalList />
+                            </Route>
+                        </CustomerProvider>
+                    </LocationProvider>
+                </AnimalProvider>
 
-                {/* <LocationProvider>
-                    <CustomerProvider>
-                        <Route exact path="/animals/create">
-                            <AnimalForm />
-                        </Route>
-                    </CustomerProvider>
-                </LocationProvider> */}
-            </AnimalProvider>
+                <CustomerProvider>
+                    <Route exact path="/customers">
+                        <CustomerList />
+                    </Route>
+                </CustomerProvider>
 
-            <CustomerProvider>
-                <Route exact path="/customers">
-                    <CustomerList />
-                </Route>
-            </CustomerProvider>
+                <EmployeeProvider>
+                    <Route exact path="/employees">
+                        <EmployeeList />
+                    </Route>
+                </EmployeeProvider>
 
-            <EmployeeProvider>
-                <Route exact path="/employees">
-                    <EmployeeList />
-                </Route>
-            </EmployeeProvider>
-
-            <LocationProvider>
-                <Route exact path="/locations">
-                    <LocationList />
-                </Route>
-            </LocationProvider>
+                <LocationProvider>
+                    <Route exact path="/locations">
+                        <LocationList />
+                    </Route>
+                </LocationProvider>
 
         </>
-    )
+            )
 }
