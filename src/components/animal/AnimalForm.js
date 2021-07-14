@@ -9,13 +9,13 @@ export const AnimalForm = () => {
   const { addAnimal } = useContext(AnimalContext)
   const { locations, getLocations } = useContext(LocationContext)
   const { customers, getCustomers } = useContext(CustomerContext)
-
+// these context providers are needed for the dropdown menus in the form 
   /*
   With React, we do not target the DOM with `document.querySelector()`. Instead, our return (render) reacts to state or props.
 
   Define the intial state of the form inputs with useState()
   */
-
+// the empty animal object (it's updated as the user enters information)
   const [animal, setAnimal] = useState({
     name: "",
     breed: "",
@@ -59,6 +59,8 @@ export const AnimalForm = () => {
       //Invoke addAnimal passing the new animal object as an argument
       //Once complete, change the url and display the animal list
 
+      // this object will have all the filled form data & it then gets sent to new animal
+      // from there, it's saved & added to the animals stored in the database 
       const newAnimal = {
         name: animal.name,
         breed: animal.breed,
