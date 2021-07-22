@@ -9,8 +9,7 @@ export const LocationCard = ({ location }) => (
                 {location.name}
             </Link>
         </h3>
-        <div className="location__address"> Address: {location.address}</div>
-        <div className="location__employeeLength">Employees: {location.employees}</div>
-        <div className="location__animalLength">Animals: {location.animals}</div>
+        <div className="location__employeeLength">Employees: {location.employee}</div>
+        <div className="location__animalLength">Animals: {location.animal}</div>
     </section>
 )
