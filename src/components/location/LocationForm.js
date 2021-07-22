@@ -33,9 +33,14 @@ export const LocationForm = () => {
     const handleClickSaveLocation = (event) => {
         event.preventDefault()
 
+        const employeeId = parseInt(sessionStorage.getItem("kennel_customer"))
+        const animalId = parseInt(sessionStorage.getItem("kennel_customer")) 
+
         const newLocation = {
             name: location.name,
-            address: location.address
+            address: location.address,
+            employeeId: employeeId,
+            animalId: animalId
         }
         addLocation(newLocation)
             .then(() => history.push("/locations"))

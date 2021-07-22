@@ -24,6 +24,13 @@ export const EmployeeProvider = (props) => {
         .then(getEmployees)
     }
 
+    const fireEmployee = employeeId => {
+        return fetch(`http://localhost:8088/employees/${employeeId}`, {
+          method: "DELETE"
+        })
+          .then(getEmployees)
+    }    
+
     const getEmployeeById = (id) => {
         return fetch(`http://localhost:8088/employees/${id}?_expand=location`)
         .then(res => res.json()) // note we don't set anything on state here. Why?
@@ -37,7 +44,7 @@ export const EmployeeProvider = (props) => {
     */
     return (
         <EmployeeContext.Provider value={{
-            employees, getEmployees, addEmployee, getEmployeeById
+            employees, getEmployees, addEmployee, getEmployeeById, fireEmployee
         }}>
             {props.children}
         </EmployeeContext.Provider>
